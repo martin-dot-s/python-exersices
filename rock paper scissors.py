@@ -4,7 +4,7 @@ game = False
 
 picks = ["rock", "paper", "scissors"]
 
-player_pick = ()d
+player_pick = ()
 
 
 def game_introduction():
