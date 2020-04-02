@@ -1,5 +1,3 @@
-# rock, paper, scissors
-
 game = False
 
 picks = ["rock", "paper", "scissors"]
