@@ -19,10 +19,10 @@ def game_start():
     global picks
     global player_pick
 
-    import random
+    import random                                       # cpu pulls a random str from the "picks" list
     cpu_pick = random.choice(picks)
 
-    if player_pick == "rock":  # win condition
+    if player_pick == "rock":                           # win condition
         if cpu_pick == "scissors":
             player_pick = input("\nYour rock wins! Wanna go again?: ")
     elif player_pick == "paper":
@@ -32,10 +32,10 @@ def game_start():
         if cpu_pick == "paper":
             player_pick = input("\nYour scissors win! Wanna go again?: ")
 
-    if str(player_pick) == str(cpu_pick):  # tie condition
+    if str(player_pick) == str(cpu_pick):               # tie condition
         player_pick = input("\nIt's a tie! Again?: ")
 
-    else:  # lose condition
+    else:                                               # lose condition
         player_pick = input("\nYou lost, the computer chose " + cpu_pick + " wanna try again?: ")
 
 
@@ -44,11 +44,11 @@ while game is False:
 
 while game is True:
     try:
-        if player_pick == "exit":  # exit option
+        if player_pick == "exit":                       # exit option
             print("Thanks for playing.")
             break
 
-        for x in picks:  # error definition
+        for x in picks:                                 # error definition
             if player_pick not in picks:
                 raise AssertionError
 
@@ -56,6 +56,6 @@ while game is True:
 
         game_start()
 
-    except AssertionError:  # error exception
+    except AssertionError:                              # error exception
         print("\nAn error has occurred, check your input and try again...\n")
         continue
