@@ -1,9 +1,7 @@
 game = False
 
 picks = ["paper", "rock", "scissors"]
-
 player_pick = ()
-
 
 def game_introduction():
     global player_pick
